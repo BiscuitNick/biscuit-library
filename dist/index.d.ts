@@ -1,21 +1,22 @@
 /// <reference types="react" />
 interface ColorPickerProps {
-    label: string;
-    value: string;
-    onChange: any;
-    onToggle?: any;
-    toggleValue?: boolean;
-}
-declare const ColorPicker: (props: ColorPickerProps) => JSX.Element;
-
-interface SelectAttributeProps {
     id: string;
     label?: string;
     value: string;
-    items: string[];
     onChange: any;
 }
-declare const SelectAttribute: (props: SelectAttributeProps) => JSX.Element;
+declare const ColorPicker: (props: ColorPickerProps) => JSX.Element;
+
+interface ColorPickerSwitchProps {
+    id: string;
+    label?: string;
+    value: string;
+    onChange: any;
+    toggleId: string;
+    onToggle: any;
+    toggleValue: boolean;
+}
+declare const ColorPickerSwitch: (props: ColorPickerSwitchProps) => JSX.Element;
 
 interface NumberInputProps {
     id: string;
@@ -27,7 +28,15 @@ interface NumberInputProps {
     step?: number;
     buttonChange?: number;
 }
-declare const NumberInput: (props: NumberInputProps) => JSX.Element;
+
+interface SelectAttributeProps {
+    id: string;
+    label?: string;
+    value: string;
+    items: string[];
+    onChange: any;
+}
+declare const SelectAttribute: (props: SelectAttributeProps) => JSX.Element;
 
 interface ToggleSwitchProps {
     id: string;
@@ -35,7 +44,6 @@ interface ToggleSwitchProps {
     value: boolean;
     onChange: any;
 }
-declare const ToggleSwitch: (props: ToggleSwitchProps) => JSX.Element;
 
 interface TextInputProps {
     id: string;
@@ -43,18 +51,13 @@ interface TextInputProps {
     value: string;
     onChange: any;
 }
-declare const TextInput: (props: TextInputProps) => JSX.Element;
 
-interface ColorPickerSwitchProps {
-    id: string;
-    label?: string;
-    value: string;
-    onChange: any;
-    toggleId?: string;
-    onToggle?: any;
-    toggleValue?: boolean;
+interface BoardProps {
+    width: number;
+    height: number;
+    children?: any;
 }
-declare const ColorPickerSwitch: (props: ColorPickerSwitchProps) => JSX.Element;
+declare const Board: (props: BoardProps) => JSX.Element;
 
 interface RectProps {
     width: number;
@@ -76,15 +79,6 @@ interface RectProps {
     immediateXY?: boolean;
 }
 declare const MyRect: (props: RectProps) => JSX.Element;
-
-interface BoardProps {
-    width: number;
-    height: number;
-    canvasRef?: object;
-    children?: any;
-    rectProps?: RectProps;
-}
-declare const Board: (props: BoardProps) => JSX.Element;
 
 interface CircleProps {
     x: number;
@@ -214,4 +208,4 @@ interface textSetterProps {
 }
 declare const TextSetters: (textProps: textSetterProps) => JSX.Element | null;
 
-export { Board, ColorPicker, ColorPickerSwitch, ColorSetters, Eye, MyCircle, MyImage, MyRect, NumberInput, NumberSetters, SelectAttribute, SelectionSetter as SelectionSetters, TextInput, TextSetters, ToggleSetters, ToggleSwitch };
+export { Board, ColorPicker, ColorPickerSwitch, ColorSetters, Eye, MyCircle, MyImage, MyRect, NumberInputProps, NumberSetters, SelectAttribute, SelectAttributeProps, SelectionSetter as SelectionSetters, TextInputProps, TextSetters, ToggleSetters, ToggleSwitchProps };

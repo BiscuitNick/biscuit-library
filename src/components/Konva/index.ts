@@ -1,5 +1,5 @@
-export { default as Board } from "./Board";
-export { default as MyRect } from "./MyRect";
-export { default as MyCircle } from "./MyCircle";
-export { default as MyImage } from "./MyImage";
-export { default as Eye } from "./Eye";
+export * from "./Boards";
+export * from "./Rectangles";
+export * from "./Circles";
+export * from "./Images";
+export * from "./Eyes";
