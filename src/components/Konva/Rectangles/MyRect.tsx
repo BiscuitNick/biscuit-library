@@ -29,7 +29,7 @@ export interface RectProps {
   immediateXY?: boolean;
 }
 
-const MyRect = (props: RectProps) => {
+const Rectangle = (props: RectProps) => {
   const { handleClick, draggable } = props;
   const {
     x,
@@ -79,4 +79,4 @@ const MyRect = (props: RectProps) => {
   );
 };
 
-export default MyRect;
+export default Rectangle;

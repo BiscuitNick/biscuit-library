@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 
 const Konva = require("react-konva");
 const { Stage, Layer } = Konva;
@@ -18,20 +18,16 @@ export interface BoardProps {
   width: number;
   height: number;
 
-  // canvasRef?: object;
+  canvasRef?: object;
   children?: any;
 }
 
 const Board = (props: BoardProps) => {
-  useEffect(() => {
-    console.log("using effect");
-  }, []);
-
-  console.log(props);
+  // const canvasRef = useRef(null);
 
   return (
     <Stage width={props.width} height={props.height}>
-      <Layer>{props.children}</Layer>
+      <Layer ref={props.canvasRef}>{props.children}</Layer>
     </Stage>
   );
 };
