@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 // import { getTextLines } from "../../../utils/getTextLines";
 
-import { getTextLines } from "../../../utils/getTextLines";
+import { getTextLines } from "../../../utils";
 
 const SpringKonva = require("@react-spring/konva");
 const { animated, useSprings, useSpring } = SpringKonva;

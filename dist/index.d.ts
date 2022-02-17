@@ -830,4 +830,6 @@ declare const getStageData: (canvasRef: any) => any;
 
 declare const isSSR: boolean;
 
-export { AnimatedImage as AniamtedImage, AnimatedCircle, AnimatedRectangle, AnimatedText, Biscuit, BiscuitBoard, Board, ColorPickerSwitch, Eye, NumberInput, SelectAttribute, TextInput, ToggleSwitch, applyDefaults, buildEyeProps, buildImageProps, buildRectProps, buildTextProps, eyeDefaults, getAbsoluteSizing, getInnerPosition, getRatio, getRefElement, getStageData, imageDefaults, isSSR, rectDefaults, textDefaults, useEventListener, useInterval, useStagePositions, useWindowSize };
+declare const getTextLines: (props: any) => any[] | null;
+
+export { AnimatedImage as AniamtedImage, AnimatedCircle, AnimatedRectangle, AnimatedText, Biscuit, BiscuitBoard, Board, ColorPickerSwitch, Eye, NumberInput, SelectAttribute, TextInput, ToggleSwitch, applyDefaults, buildEyeProps, buildImageProps, buildRectProps, buildTextProps, eyeDefaults, getAbsoluteSizing, getInnerPosition, getRatio, getRefElement, getStageData, getTextLines, imageDefaults, isSSR, rectDefaults, textDefaults, useEventListener, useInterval, useStagePositions, useWindowSize };
