@@ -1,8 +1,4 @@
 /// <reference types="react" />
-export interface getRatioParams {
-    ratio: number;
-    sum: number;
-}
 export interface EyeProps {
     x: number;
     y: number;
@@ -21,9 +17,10 @@ export interface EyeProps {
     innerRotation?: number;
     innerStrokeWidth?: number;
     outerStrokeWidth?: number;
-    focalPoint: any;
-    sensitivity: number;
-    movementFactor: number;
+    innerXY: {
+        x: number;
+        y: number;
+    };
     disableClip?: boolean;
     handleClick?: any;
     handleDrag?: any;
@@ -33,6 +30,10 @@ export interface EyeProps {
     outerFillEnabled?: boolean;
     outerStrokeEnabled?: boolean;
     id?: string;
+    box?: {
+        width: number;
+        height: number;
+    };
 }
 declare const Eye: (props: EyeProps) => JSX.Element;
 export default Eye;

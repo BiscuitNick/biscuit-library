@@ -18,5 +18,5 @@ export interface RectProps {
     draggable?: boolean;
     immediateXY?: boolean;
 }
-declare const MyRect: (props: RectProps) => JSX.Element;
-export default MyRect;
+declare const Rectangle: (props: RectProps) => JSX.Element;
+export default Rectangle;
