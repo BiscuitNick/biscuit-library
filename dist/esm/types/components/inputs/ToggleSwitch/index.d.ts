@@ -7,5 +7,5 @@ export interface ToggleSwitchProps {
     round?: boolean;
     color?: string;
 }
-declare const ToggleSwitch: ({ round, color, ...props }: ToggleSwitchProps) => JSX.Element;
+declare const ToggleSwitch: ({ round, ...props }: ToggleSwitchProps) => JSX.Element;
 export default ToggleSwitch;
