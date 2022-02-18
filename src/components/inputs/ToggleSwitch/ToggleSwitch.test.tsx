@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import ToggleSwitch from "./ToggleSwitch";
+import ToggleSwitch from "./";
 
 describe("ToggleSwitch", () => {
   test("Renders TogleSwitch", () => {

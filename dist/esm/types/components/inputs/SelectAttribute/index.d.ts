@@ -1,4 +1,5 @@
 /// <reference types="react" />
+import "../globals.css";
 export interface SelectAttributeProps {
     id: string;
     label?: string;

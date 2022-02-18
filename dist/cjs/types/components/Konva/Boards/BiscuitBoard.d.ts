@@ -1,5 +1,5 @@
 /// <reference types="react" />
-export interface biscuitParams {
+export interface BiscuitProps {
     width?: number;
     height?: number;
     contentIDs: string[];
@@ -7,5 +7,5 @@ export interface biscuitParams {
         [key: string]: any;
     };
 }
-declare const BiscuitBoard: (props: biscuitParams) => JSX.Element;
+declare const BiscuitBoard: (props: BiscuitProps) => JSX.Element;
 export default BiscuitBoard;

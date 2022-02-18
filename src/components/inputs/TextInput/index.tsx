@@ -1,5 +1,5 @@
 import React from "react";
-// import "./TextInput.css";
+import "../globals.css";
 
 export interface TextInputProps {
   id: string;
@@ -11,8 +11,6 @@ export interface TextInputProps {
 
 const TextInput = (props: TextInputProps) => {
   const { id, label, value, onChange } = props;
-
-  //   const [text, set] = useRecoilState(memeTextAtom);
 
   return (
     <div className="inputContainer2Wide">

@@ -54,7 +54,7 @@ export interface EyeProps {
   outerFillEnabled?: boolean;
   outerStrokeEnabled?: boolean;
 
-  id?: string;
+  contentID: string;
   box?: { width: number; height: number };
 }
 
@@ -69,29 +69,20 @@ const Eye = (props: EyeProps) => {
     outerFill,
     outerStroke,
     outerRotation,
-
     innerSize,
     innerShape,
     innerFill,
     innerStroke,
     innerRotation,
-
-    // focalPoint,
     disableClip,
-    // sensitivity,
-    // movementFactor, //InnerShape movement distance // OuterSize*MovmentFactor ==> MovmentRange
     w2h,
-
     innerXY,
-
     innerFillEnabled,
     innerStrokeEnabled,
     outerFillEnabled,
     outerStrokeEnabled,
-
     innerStrokeWidth,
     outerStrokeWidth,
-
     draggable,
   } = props;
 
@@ -108,7 +99,7 @@ const Eye = (props: EyeProps) => {
       ? (ctx: any) =>
           ctx.rect(-outerSize, -outerSize, outerSize * 2, outerSize * 2)
       : null,
-    id: props.id,
+    id: props.contentID,
     box: props.box,
   };
 
@@ -126,7 +117,7 @@ const Eye = (props: EyeProps) => {
     y: 0,
     fill: outerFill,
     fillEnabled: outerFillEnabled,
-    id: props.id,
+    contentID: props.contentID,
     box: props.box,
 
     // listening: false, //TODO add to Circle and Square Props;
@@ -139,7 +130,7 @@ const Eye = (props: EyeProps) => {
     strokeEnabled: outerStrokeEnabled,
     strokeWidth: outerStrokeWidth,
     // listening: false, //TODO add to Circle and Square Props;
-    id: props.id,
+    contentID: props.contentID,
     box: props.box,
   };
 
@@ -154,7 +145,7 @@ const Eye = (props: EyeProps) => {
     immediateXY: false,
     dragable: false,
     rotation: innerRotation || 0,
-    id: props.id,
+    contentID: props.contentID,
     box: props.box,
 
     // listening: false, //TODO add to Circle and Square Props;
@@ -201,7 +192,8 @@ const Eye = (props: EyeProps) => {
 
   return (
     <animated.Group
-      id={props.id}
+      contentID={props.contentID}
+      id={props.contentID}
       {...animatedGroup}
       onDragStart={props.handleDrag}
       onDragEnd={props.handleDrag}

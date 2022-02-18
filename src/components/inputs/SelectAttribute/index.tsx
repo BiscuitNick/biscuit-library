@@ -1,5 +1,5 @@
 import React from "react";
-// import "./SelectAttribute.css";
+import "../globals.css";
 
 export interface SelectAttributeProps {
   id: string;

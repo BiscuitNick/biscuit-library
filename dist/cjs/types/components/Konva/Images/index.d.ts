@@ -15,7 +15,7 @@ export interface ImageProps {
     canvasRef?: object;
     handleClick?: any;
     handleDrag?: any;
-    id: string;
+    contentID: string;
     box?: {
         width: number;
         height: number;

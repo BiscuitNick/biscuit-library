@@ -1,4 +1,7 @@
-import { eyeDefaults, imageDefaults, rectDefaults, textDefaults } from ".";
+import eyeDefaults from "./eyeDefaults";
+import imageDefaults from "./imageDefaults";
+import rectDefaults from "./rectDefaults";
+import textDefaults from "./textDefaults";
 
 interface contentItemProps {
   contentID: string;

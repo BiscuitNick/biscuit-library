@@ -30,7 +30,7 @@ interface AnimatedTextProps {
   handleDrag?: any;
 
   //Meta
-  id?: string;
+  contentID: string;
   box: { width: number; height: number };
   canvasRef: any;
 
@@ -71,7 +71,7 @@ const AnimatedText = (props: AnimatedTextProps) => {
     handleClick,
     handleDrag,
 
-    id,
+    contentID,
     box,
     canvasRef,
 
@@ -89,14 +89,12 @@ const AnimatedText = (props: AnimatedTextProps) => {
 
   const align = props.align || "center";
 
-  const textLines: any = useMemo(() => {
+  const textLines = useMemo(() => {
     const mytexts = getTextLines({
       box: { width: width || 0, height: height || 0 },
       content: props,
       canvasRef,
     });
-
-    console.log(mytexts);
 
     return mytexts || [];
   }, [textContent, width, height, fontFamily, fontStyle]); //box.width, box.height,
@@ -107,7 +105,8 @@ const AnimatedText = (props: AnimatedTextProps) => {
       const line = textLines[i];
       const {
         fontSize, //: unAdjustedFontSize,
-        text, // fontWeight,
+        text,
+        fontWeight,
       } = line;
 
       const strokeWidth = fontSize * (strokeWidthFactor || 0);
@@ -119,12 +118,12 @@ const AnimatedText = (props: AnimatedTextProps) => {
         strokeWidth,
         y: line.y,
         width: line.width,
-        // height: line.height,
+        height: line.height,
         fill,
         stroke,
         fontFamily,
 
-        fontStyle: fontStyle, //|| fontWeight,
+        fontStyle: fontStyle || fontWeight,
         align,
         hitStrokeWidth: fontSize,
 
@@ -152,7 +151,7 @@ const AnimatedText = (props: AnimatedTextProps) => {
     <animated.Text
       key={"txt-" + i}
       {...txt}
-      id={id}
+      contentID={contentID}
       draggable={false}
       fillEnabled={fillEnabled}
       strokeEnabled={strokeEnabled}
@@ -175,7 +174,8 @@ const AnimatedText = (props: AnimatedTextProps) => {
   return (
     <animated.Group
       {...groupSpring}
-      id={id}
+      contentID={contentID}
+      id={contentID}
       box={box}
       onClick={handleClick}
       onDragStart={handleDrag}

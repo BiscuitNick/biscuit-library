@@ -49,7 +49,7 @@ interface TextInputProps {
 }
 declare const TextInput: (props: TextInputProps) => JSX.Element;
 
-interface biscuitParams {
+interface BiscuitProps$1 {
     width?: number;
     height?: number;
     contentIDs: string[];
@@ -57,7 +57,7 @@ interface biscuitParams {
         [key: string]: any;
     };
 }
-declare const BiscuitBoard: (props: biscuitParams) => JSX.Element;
+declare const BiscuitBoard: (props: BiscuitProps$1) => JSX.Element;
 
 interface BoardProps {
     width: number;
@@ -82,7 +82,7 @@ interface CircleProps {
     handleDrag?: any;
     immediateXY?: boolean;
     listening?: boolean;
-    id?: string;
+    contentID: string;
     box?: {
         width: number;
         height: number;
@@ -138,7 +138,7 @@ interface EyeProps {
     innerStrokeEnabled?: boolean;
     outerFillEnabled?: boolean;
     outerStrokeEnabled?: boolean;
-    id?: string;
+    contentID: string;
     box?: {
         width: number;
         height: number;
@@ -162,7 +162,7 @@ interface ImageProps {
     canvasRef?: object;
     handleClick?: any;
     handleDrag?: any;
-    id: string;
+    contentID: string;
     box?: {
         width: number;
         height: number;
@@ -186,7 +186,7 @@ interface RectProps {
     rotation?: number;
     handleClick?: any;
     handleDrag?: any;
-    id?: string;
+    contentID: string;
     box?: {
         width: number;
         height: number;
@@ -214,7 +214,7 @@ interface AnimatedTextProps {
     strokeWidthFactor?: number;
     handleClick?: any;
     handleDrag?: any;
-    id?: string;
+    contentID: string;
     box: {
         width: number;
         height: number;

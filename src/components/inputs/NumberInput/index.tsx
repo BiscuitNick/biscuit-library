@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-// import "./NumberInput.css";
+import "../globals.css";
 
 export interface NumberInputProps {
   id: string;

@@ -1,4 +1,5 @@
 /// <reference types="react" />
+import "../globals.css";
 export interface NumberInputProps {
     id: string;
     label?: string;

@@ -1,5 +1,4 @@
 /// <reference types="react" />
-import "./ToggleSwitch.scss";
 export interface ToggleSwitchProps {
     id: string;
     label?: string;

@@ -14,7 +14,7 @@ export interface CircleProps {
     handleDrag?: any;
     immediateXY?: boolean;
     listening?: boolean;
-    id?: string;
+    contentID: string;
     box?: {
         width: number;
         height: number;

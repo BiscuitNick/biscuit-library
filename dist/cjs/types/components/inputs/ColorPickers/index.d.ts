@@ -1,4 +1,5 @@
 /// <reference types="react" />
+import "../globals.css";
 export interface ColorPickerSwitchProps {
     id: string;
     label?: string;

@@ -12,7 +12,7 @@ export interface RectProps {
     rotation?: number;
     handleClick?: any;
     handleDrag?: any;
-    id?: string;
+    contentID: string;
     box?: {
         width: number;
         height: number;

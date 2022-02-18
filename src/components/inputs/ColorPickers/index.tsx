@@ -1,5 +1,6 @@
 import React from "react";
 // import "./ColorPickers.css";
+import "../globals.css";
 
 export interface ColorPickerSwitchProps {
   id: string;

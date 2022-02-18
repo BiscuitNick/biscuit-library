@@ -29,7 +29,7 @@ export interface EyeProps {
     innerStrokeEnabled?: boolean;
     outerFillEnabled?: boolean;
     outerStrokeEnabled?: boolean;
-    id?: string;
+    contentID: string;
     box?: {
         width: number;
         height: number;
