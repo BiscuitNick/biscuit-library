@@ -1,9 +1,13 @@
 {
   "name": "@biscuitnick/biscuit-library",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/biscuitnick/biscuit-library.git"
+  },
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
