@@ -1,6 +1,6 @@
 {
   "name": "@biscuitnick/biscuit-library",
-  "version": "1.4.10",
+  "version": "1.4.11",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -40,7 +40,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "postcss": "^8.4.6",
-    "react": "^17.0.2",
     "rollup": "^2.67.2",
     "rollup-plugin-dts": "^4.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -55,9 +54,9 @@
   },
   "peerDependencies": {
     "konva": "^8.3.2",
-    "react-konva": "^17.0.2-5"
-  },
-  "dependencies": {
+    "react": "^17.0.2",
+    "react-konva": "^17.0.2-5",
     "react-spring": "^9.4.3"
-  }
+  },
+  "dependencies": {}
 }
