@@ -1,6 +1,6 @@
 {
   "name": "@biscuitnick/biscuit-library",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -41,7 +41,6 @@
     "jest": "^27.5.1",
     "postcss": "^8.4.6",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-test-renderer": "^17.0.2",
     "rollup": "^2.67.2",
     "rollup-plugin-dts": "^4.1.0",
@@ -56,11 +55,10 @@
     "webpack": "^5.68.0"
   },
   "peerDependencies": {
+    "@react-spring/web": "^9.4.3",
     "konva": "^8.3.2",
     "react-konva": "^17.0.2-5",
     "react-spring": "^9.4.3"
   },
-  "dependencies": {
-    "@react-spring/web": "^9.4.3"
-  }
+  "dependencies": {}
 }
